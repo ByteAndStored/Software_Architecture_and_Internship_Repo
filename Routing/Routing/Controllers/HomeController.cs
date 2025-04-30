@@ -17,14 +17,16 @@ ve türde cevap dönebilmesini sağlarmış */
     {
         return View ();
     }
-
+    
+    //kullanıcı istedi
     [HttpGet] //metod sadece httpGet isteklerini kabul edecek demektir
     public IActionResult Create()
     {
         return View();
     }
 
-    [HttpPost] //formdan gelen veriyi alan action
+    //kullanıcı postladı
+    [HttpPost] //formdan gelen veriyi alan oaction
     public IActionResult Create(Product product)
     {
         if (ModelState.IsValid)
